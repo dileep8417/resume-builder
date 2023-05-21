@@ -1,0 +1,11 @@
+.detailsPage {
+    display: flex;
+}
+
+.content {
+    flex: 1;
+    height: calc(100vh - 137px);
+    overflow-y: auto;
+    padding: 24px;
+
+}

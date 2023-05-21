@@ -1,0 +1,93 @@
+.welcome_page {
+    color: #333333;
+}
+
+.header {
+    background: #E7EAEC;
+    padding: 60px 48px 48px;
+    margin: 0 0 48px;
+}
+
+.page_heading {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    margin: 0 0 8px;
+}
+
+.page_sub_heading {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #666666;
+    margin: 0 0 24px;
+}
+
+.bottom_section {
+    text-align: center;
+    margin: 0 0 48px;
+}
+
+.instructions_msg {
+    font-weight: 500;
+    margin: 24px 0 16px;
+}
+
+.instructions_container {
+    border: 1px solid #2B98D6;
+    border-radius: 16px;
+    padding: 32px;
+    max-width: 520px;
+    margin: auto;
+}
+
+.step {
+    display: flex;
+    gap: 28px;
+    margin: 0 0 18px;
+}
+
+.step:nth-last-child(1) {
+    margin: 0;
+}
+
+.step_heading {
+    color: black;
+    width: 58px;
+    font-weight: 500;
+}
+
+.instruction {
+}
+
+@media (max-width: 767px) {
+    .header {
+        padding: 48px 24px 24px;
+    }
+    
+    .page_heading {
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 32px;
+    }
+    
+    .page_sub_heading {
+        font-size: 18px;
+        line-height: 22px;
+        margin: 0 0 16px;
+    }
+
+    .bottom_section {
+        font-size: 16px;
+        line-height: 18px;
+        padding: 0 16px;
+    }
+
+    .instructions_container {
+        border-radius: 12px;
+        padding: 16px 24px;
+    }
+    
+    .step {
+    }
+}
