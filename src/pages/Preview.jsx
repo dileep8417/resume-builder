@@ -1,6 +1,10 @@
+import Resume from "../components/resume/resume";
+
 const Preview = () => {
     return (
-        <div>Preview</div>
+        <div>
+            <Resume />
+        </div>
     );
 }
 

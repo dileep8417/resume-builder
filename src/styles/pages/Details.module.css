@@ -4,8 +4,18 @@
 
 .content {
     flex: 1;
-    height: calc(100vh - 137px);
+    height: calc(100vh - 55px);
     overflow-y: auto;
     padding: 24px;
+    display: flex;
+    gap: 32px;
+}
 
+.formContent {
+    flex: 1;
+}
+.resumeContainer {
+    width: 650px;
+    height: calc(100vh - 55px);
+    overflow: auto;
 }

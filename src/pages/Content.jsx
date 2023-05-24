@@ -4,15 +4,15 @@ import Details from './Details';
 import Preview from './Preview';
 import PageNotFound from './PageNotFound';
 import { Routes, Route} from 'react-router-dom';
-import PersonalDetails from '../components/forms/PersonalDetails';
-import Summary from '../components/forms/Summary';
-import WorkExperience from '../components/forms/WorkExperience';
-import TechnicalSkills from '../components/forms/TechnicalSkills';
-import SoftSkills from '../components/forms/SoftSkills';
-import WorkLinks from '../components/forms/WorkLinks';
-import Achievements from '../components/forms/Achievements';
-import Projects from '../components/forms/Projects';
-import Education from '../components/forms/Education';
+import PersonalDetails from '../components/form/PersonalDetails';
+import Summary from '../components/form/Summary';
+import WorkExperience from '../components/form/WorkExperience';
+import Education from '../components/form/Education';
+import Projects from '../components/form/Projects';
+import TechnicalSkills from '../components/form/TechnicalSkills';
+import SoftSkills from '../components/form/SoftSkills';
+import WorkLinks from '../components/form/WorkLinks';
+import Achievements from '../components/form/Achievements';
 
 const Content = () => {
     return (

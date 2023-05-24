@@ -5,6 +5,9 @@ import { useSelector } from 'react-redux';
 
 const Navbar = () => {
     const path = useLocation().pathname;
+    if (path.includes('/preview')) {
+        return;
+    }
     const showDetailsLink = isCategoriesSelected(useSelector(state => state.categories));
     const isDetailsPage = path.includes('/details');
     const isCategoriesPage = path.includes('/categories');

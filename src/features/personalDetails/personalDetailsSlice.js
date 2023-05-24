@@ -1,8 +1,9 @@
+import { createSlice } from "@reduxjs/toolkit";
+
 const initialState = {
-    name: '',
-    mobile: '',
-    mail: '',
-    address: '',
-    summary: '',
-    achievements: [],
+    
 };
+
+const personalDetailsSlice = createSlice({
+
+});
