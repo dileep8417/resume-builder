@@ -44,8 +44,8 @@ export function getCategoriesState() {
             toShowInSelection: true
         },
         {
-            id: 'achievements',
-            name: 'Achievements',
+            id: 'accomplishments',
+            name: 'Accomplishments',
             isSelected: false,
             toShowInSelection: true
         },

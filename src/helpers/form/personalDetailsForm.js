@@ -22,11 +22,5 @@ export const personalDetailsFormTemplate = {
             placeholder: 'Eluru, Andhra Pradesh',
             isMandatory: true,
         },
-        summary: {
-            label: 'Summary',
-            placeholder: 'Ex: A passionate application developer...',
-            isMandatory: true,
-            isTxtArea: true
-        },
     }
 }

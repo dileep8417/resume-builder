@@ -12,7 +12,6 @@ export const defaultFormData = {
             mobile: '',
             mail: '',
             address: '',
-            summary: '',
         }
     },
     summary: {
@@ -74,10 +73,10 @@ export const defaultFormData = {
             other: ''
         }
     },
-    achievements: {
+    accomplishments: {
         id: getUID(),
         fields: {
-            achievement: '',
+            accomplishment: '',
         }
     },
 }

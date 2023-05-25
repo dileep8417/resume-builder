@@ -8,6 +8,7 @@ import { BsFillTrash3Fill } from 'react-icons/bs';
 import EducationActions from './form/EducationActions';
 import ProjectsActions from './form/ProjectsActions';
 import TechnicalSkillsActions from './form/TechnicalSkillsActions';
+import { useEffect } from 'react';
 
 const Form = ({ categoryType, formTemplate }) => {
     const formData = useSelector(state => state.formData[categoryType]);
@@ -34,10 +35,9 @@ const Form = ({ categoryType, formTemplate }) => {
         dispatch(removeFrom(data))
     }
 
-    function saveDataClickHandler(showAlert = true) {
-        localStorage.setItem(categoryType, JSON.stringify(formData));
-        showAlert && alert('Data Saved!');
-    }
+   useEffect(() => {
+    localStorage.setItem(categoryType, JSON.stringify(formData));
+   }, [formData]);
 
     function getNxtStepLink() {
         const selectedCategories = useSelector(state => state.categories.filter(category => category.isSelected));
@@ -74,7 +74,7 @@ const Form = ({ categoryType, formTemplate }) => {
                                     return (
                                         <div className={styles.formGroup} key={fieldName}>
                                             <label>{field.label}</label>
-                                            {field.isTxtArea ? (<textarea name={fieldName} placeholder={field.placeholder} onChange={fieldChangeHandler}></textarea>) : (<input type="text" value={form.fields[fieldName]} name={fieldName} placeholder={field.placeholder} onChange={fieldChangeHandler} />)}
+                                            {field.isTxtArea ? (<textarea name={fieldName} value={form.fields[fieldName]} placeholder={field.placeholder} onChange={fieldChangeHandler}></textarea>) : (<input type="text" value={form.fields[fieldName]} name={fieldName} placeholder={field.placeholder} onChange={fieldChangeHandler} />)}
                                         </div>
                                     )
                                 })}
@@ -91,10 +91,7 @@ const Form = ({ categoryType, formTemplate }) => {
             {categoryType === 'technicalSkills' && <TechnicalSkillsActions styles={styles} />}
 
             <div className={styles.btnContainer}>
-                <button className={`btnTerinary ${styles.btn}`} onClick={saveDataClickHandler}>Save Data</button>
-            
-                {nxtStepLink ? <Link to={nxtStepLink} className={`primary_btn ${styles.btn}`} onClick={() => saveDataClickHandler(false)}>Save & Next</Link> : <Link to='/preview' className={`primary_btn ${styles.btn}`}>Preview details</Link>}
-            
+                {nxtStepLink ? <Link to={nxtStepLink} className={`primary_btn ${styles.btn}`}>Next Step</Link> : <Link to='/preview' className={`primary_btn ${styles.btn}`}>Preview details</Link>}
             </div>
             
         </div>

@@ -3,6 +3,15 @@ const styles = {
         backgroundColor: '#484848',
         padding: '64px 0',
     },
+
+    expandIcon: {
+        position: 'absolute',
+        top: '24px',
+        right: '16px',
+        color: 'white',
+        fontSize: '24px',
+        cursor: 'pointer',
+    },
     
     resume: {
         position: 'relative',
@@ -111,6 +120,10 @@ const styles = {
     
     project: {
         margin: '0 0 14px',
+    },
+
+    projectDescription: {
+        margin: '6px 0 0',
     },
     
     skillCategory: {

@@ -11,7 +11,7 @@ const initialState = {
     projects: loadFormData('projects'),
     softSkills: loadFormData('softSkills'),
     workLinks: loadFormData('workLinks'),
-    achievements: loadFormData('achievements'),
+    accomplishments: loadFormData('accomplishments'),
 };
 
 const formSlice = createSlice({

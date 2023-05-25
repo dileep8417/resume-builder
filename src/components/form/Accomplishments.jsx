@@ -1,13 +1,13 @@
 import { achievementsFormTemplate } from "../../helpers/form/achievementsForm";
 import Form from "../Form";
 
-const Achievements = () => {
+const Accomplishments = () => {
 
     return (
         <div>
-            <Form categoryType='achievements' formTemplate={achievementsFormTemplate} />
+            <Form categoryType='accomplishments' formTemplate={achievementsFormTemplate} />
         </div>
     );
 }
 
-export default Achievements;
+export default Accomplishments;

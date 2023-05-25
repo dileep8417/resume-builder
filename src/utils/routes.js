@@ -7,7 +7,7 @@ const routes = {
     projects: '/details/projects',
     softSkills: '/details/soft_skills',
     workLinks: '/details/work_links',
-    achievements: '/details/achievements'
+    accomplishments: '/details/accomplishments'
 }
 
 export default routes;

@@ -1,18 +1,30 @@
+import { useSelector } from "react-redux";
 import withShowSelectedCategory from "../../../hoc/withShowSelectedCategory";
 
 const ProjectsSection = ({ styles }) => {
-
+    const projects = useSelector(state => state.formData.projects);
     return (
         <div style={styles.section}>
             <div style={styles.heading}>Recent Projects</div>
-            <div style={styles.project}>
-                <div style={styles.subHeading}>Test App</div>
-                <div>ipsum dolor sit amet consectetur adipisicing elit. Rem unde id eligendi similique? Sequi provident, molestiae ipsam sunt recusandae ratione voluptatibus error at cupiditate doloribus porro sit fugiat exercitationem natus.</div>
-            </div>
-            <div style={styles.project}>
-                <div style={styles.subHeading}>Test App</div>
-                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem unde id eligendi similique? Sequi provident, molestiae ipsam sunt recusandae ratione voluptatibus error at cupiditate doloribus porro sit fugiat exercitationem natus.</div>
-            </div>
+            {projects.map(project => {
+                const title = project.fields.projectName.trim();
+                const description = project.fields.description.trim();
+                const sourceCode = project.fields.sourceCode.trim();
+                const demo = project.fields.demo.trim();
+
+                return (
+                    <div key={project.id} style={styles.project}>
+                        <div style={styles.flexContainer}>
+                            <div style={{...styles.subHeading, ...{marginBottom: '0'}}}>{title !== '' && title}</div>
+                            <div>
+                                {sourceCode.length > 7 && <a style={{margin: '0 12px 0 0', textDecoration: 'none'}} target="_blank" rel="norefferer" href={sourceCode}>Source code</a>}
+                                {demo.length > 7 && <a style={{textDecoration: 'none'}} target="_blank" rel="norefferer" href={demo}>Demo</a>}
+                            </div>
+                        </div>
+                        <div style={styles.projectDescription}>{description !== '' && description}</div>
+                    </div>
+                )
+            })}
         </div>
     );
 }

@@ -1,12 +1,17 @@
+import { useSelector } from "react-redux";
 import withShowSelectedCategory from "../../../hoc/withShowSelectedCategory";
 
 const ContactDetailsSection = ({ styles }) => {
-
+    const details = useSelector(state => state.formData.personalDetails[0]);
+    const mobile = details.fields.mobile.trim();
+    const address = details.fields.address.trim();
+    const mail = details.fields.mail.trim();
     return (
         <div style={styles.section}>
             <div style={styles.heading}>Contact Info</div>
-            <div style={styles.contactItem}>7013104703</div>
-            <div style={styles.contactItem}>dileep8417@gmail.com</div>
+            {mobile !== '' && <div style={styles.contactItem}>{mobile}</div>}
+            {mail !== '' && <div style={styles.contactItem}>{mail}</div>}
+            {address !== '' && <div style={styles.contactItem}>{address}</div>}
         </div>
     );
 }

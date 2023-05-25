@@ -12,7 +12,7 @@ import Projects from '../components/form/Projects';
 import TechnicalSkills from '../components/form/TechnicalSkills';
 import SoftSkills from '../components/form/SoftSkills';
 import WorkLinks from '../components/form/WorkLinks';
-import Achievements from '../components/form/Achievements';
+import Accomplishments from '../components/form/Accomplishments';
 
 const Content = () => {
     return (
@@ -29,7 +29,7 @@ const Content = () => {
                     <Route path='technical_skills' element={<TechnicalSkills />} />
                     <Route path='soft_skills' element={<SoftSkills />} />
                     <Route path='work_links' element={<WorkLinks />} />
-                    <Route path='achievements' element={<Achievements />} />
+                    <Route path='accomplishments' element={<Accomplishments />} />
                     <Route path='projects' element={<Projects />} />
                     <Route path='education' element={<Education />} />
                 </Route>

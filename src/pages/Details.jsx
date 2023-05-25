@@ -12,7 +12,7 @@ const Details = () => {
                     <Outlet />
                 </div>
                 <div className={styles.resumeContainer}>
-                    <Resume />
+                    <Resume isPreviewMode={true} />
                 </div>
             </div>
         </div>
