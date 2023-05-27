@@ -74,7 +74,7 @@ const Form = ({ categoryType, formTemplate }) => {
                                     return (
                                         <div className={styles.formGroup} key={fieldName}>
                                             <label>{field.label}</label>
-                                            {field.isTxtArea ? (<textarea name={fieldName} value={form.fields[fieldName]} placeholder={field.placeholder} onChange={fieldChangeHandler}></textarea>) : (<input type="text" value={form.fields[fieldName]} name={fieldName} placeholder={field.placeholder} onChange={fieldChangeHandler} />)}
+                                            {field.isTxtArea ? (<textarea name={fieldName} value={form.fields[fieldName]} placeholder={field.placeholder} onChange={fieldChangeHandler}></textarea>) : (<input type="text" value={form.fields[fieldName]} name={fieldName} autoComplete='off' placeholder={field.placeholder} onChange={fieldChangeHandler} />)}
                                         </div>
                                     )
                                 })}

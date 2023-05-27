@@ -13,6 +13,7 @@ import TechnicalSkills from '../components/form/TechnicalSkills';
 import SoftSkills from '../components/form/SoftSkills';
 import WorkLinks from '../components/form/WorkLinks';
 import Accomplishments from '../components/form/Accomplishments';
+import ResumePDF from './ResumePDF';
 
 const Content = () => {
     return (
@@ -33,6 +34,8 @@ const Content = () => {
                     <Route path='projects' element={<Projects />} />
                     <Route path='education' element={<Education />} />
                 </Route>
+
+                <Route path='/resume' element={<ResumePDF />} />
 
                 <Route path='/preview' element={<Preview />} />
                 

@@ -69,3 +69,16 @@ export function isCategorySelected(categoryName, categories) {
 export function getCategoryRoute(categoryName) {
     return '/details/' + categoryName.toLowerCase().trim().replace(' ', '_');
 }
+
+export function getSelectedCategories() {
+    const categories = getCategoriesState();
+    const selectedCategories = [];
+    categories.forEach(category => {
+        if (!category.isSelected) {
+            return;
+        }
+        selectedCategories[category.id] = category.isSelected;
+    });
+
+    return selectedCategories;
+}

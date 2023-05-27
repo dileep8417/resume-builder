@@ -11,7 +11,11 @@ const AccomplishmentsSection = ({ styles }) => {
                     {accomplishments.map((accomplishment, index) => {
                         return (
                             <div key={index}>
-                                {accomplishments.length === 1 ? accomplishment : <li style={styles.listItem}>{accomplishment}</li>} 
+                                {accomplishment !== '' && (
+                                    <div>
+                                        {accomplishments.length === 1 ? accomplishment : <li style={styles.listItem}>{accomplishment}</li>}
+                                    </div> 
+                                )}
                             </div>
                         )
                     })}

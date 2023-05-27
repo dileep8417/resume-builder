@@ -1,6 +1,10 @@
 import { useSelector } from "react-redux";
 import withShowSelectedCategory from "../../../hoc/withShowSelectedCategory";
-import { isValidURL, showURLLink } from "../../../utils/utils";
+import WorkLink from "../../wrappers/WorkLink";
+import globeIcon from '../../../assets/icons/globe.svg';
+import githubIcon from '../../../assets/icons/github.svg';
+import linkedinIcon from '../../../assets/icons/linkedin.svg';
+import linkIcon from '../../../assets/icons/link.svg';
 
 const WorkLinksSection = ({ styles }) => {
 
@@ -13,10 +17,12 @@ const WorkLinksSection = ({ styles }) => {
     return (
         <div style={styles.section}>
             <div style={styles.heading}>Work Links</div>
-            {isValidURL(portfolio) && <a href={portfolio} target="_blank" rel="norefferrer" style={styles.link}>{showURLLink(portfolio)}</a>}
-            {isValidURL(linkedin) && <a href={linkedin} target="_blank" rel="norefferrer" style={styles.link}>{showURLLink(linkedin)}</a>}
-            {isValidURL(github) && <a href={github} target="_blank" rel="norefferrer" style={styles.link}>{showURLLink(github)}</a>}
-            {isValidURL(other) && <a href={other} target="_blank" rel="norefferrer" style={styles.link}>{showURLLink(other)}</a>}
+            <div style={styles.listItems}>
+                <WorkLink link={portfolio} styles={styles} icon={globeIcon} />
+                <WorkLink link={github} styles={styles} icon={githubIcon} />
+                <WorkLink link={linkedin} styles={styles} icon={linkedinIcon} />
+                <WorkLink link={other} styles={styles} icon={linkIcon} />
+            </div>
         </div>
     );
 }

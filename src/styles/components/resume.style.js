@@ -1,18 +1,4 @@
 const styles = {
-    content: {
-        backgroundColor: '#484848',
-        padding: '64px 0',
-    },
-
-    expandIcon: {
-        position: 'absolute',
-        top: '24px',
-        right: '16px',
-        color: 'white',
-        fontSize: '24px',
-        cursor: 'pointer',
-    },
-    
     resume: {
         position: 'relative',
         width: '611px',
@@ -20,39 +6,46 @@ const styles = {
         background: '#FFFFFF',
         margin: 'auto',
         padding: '24px',
-    },
-    
-    txtContent: {
+        fontFamily: 'Inter',
         fontWeight: '400',
         fontSize: '11px',
-        lineHeight: '14px',
+        lineHeight: 1.2727,
         color: '#000000',
     },
     
     heading: {
-        fontWeight: '800',
+        fontWeight: '900',
         fontSize: '12px',
-        lineHeight: '12px',
+        lineHeight: 1,
         color: '#2E4064',
-        margin: '0 0 8px',
+        margin: '0 0 10px',
     },
     
     subHeading: {
         fontWeight: '700',
         fontSize: '11px',
-        lineHeight: '14px',
+        lineHeight: 1.2727,
         margin: '0 0 6px',
+    },
+
+    txtContent: {
+        fontWeight: '400',
+        fontSize: '11px',
+        lineHeight: 1.2727,
+        color: '#000000',
     },
     
     personName: {
-        fontWeight: '800',
+        fontWeight: '900',
         fontSize: '24px',
-        lineHeight: '26px',
+        lineHeight: 1.1,
         color: '#2E4064',
     },
     
     body: {
         display: 'flex',
+        flexDirection: 'row',
+        flexWrap: 'nowrap',
         gap: '32px',
     },
     
@@ -61,15 +54,21 @@ const styles = {
     },
     
     rightContainer: {
-        width: '152px',
+        width: '190px',
     },
     
+    rightContainerPdf: {
+        width: '168px',
+    },
+
     section: {
         margin: '24px 0 0',
     },
     
-    company: {
-        margin: '0 0 14px',
+    companies: {
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '14px'
     },
     
     companyName: {
@@ -94,15 +93,15 @@ const styles = {
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
-    },
-    
-    duration: {
-        fontSize: '10px',
-        lineHeight: '12px',
+        flexDirection: 'row'
     },
     
     workDone: {
         padding: '0 0 0 24px',
+    },
+
+    workDonePdf: {
+        padding: '0 0 0 8px'
     },
     
     collegeInfo: {
@@ -126,19 +125,40 @@ const styles = {
         margin: '6px 0 0',
     },
     
+    skillCategories: {
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '14px'
+    },
+    
     skillCategory: {
-        margin: '0 0 14px',
+        display: 'flex',
+        flexDirection: 'column',
     },
-    
+
     link: {
-        display: 'block',
-        margin: '0 0 14px',
         textDecoration: 'none',
-        color: '#000000'
+        color: '#000000',
+        wordBreak: 'break-all'
     },
     
-    contactItem: {
-        margin: '0 0 14px',
+    listItems: {
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '14px'
+    },
+
+    listWithIcon: {
+        display: 'flex',
+        flexDirection: 'row',
+        gap: '6px',
+        alignItems: 'center'
+    },
+
+    listIcon: {
+        width: '11px',
+        height: '11px',
+        position: 'relative',
     },
 }
 

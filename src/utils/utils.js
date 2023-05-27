@@ -15,5 +15,6 @@ export function isValidURL(url) {
 }
 
 export function showURLLink(url) {
-    return url.replace('http://', '').replace('https://', '');
+    url = url.toLowerCase();
+    return url.replace('http://', '').replace('https://', '').replace('www.', '');
 }

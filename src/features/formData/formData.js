@@ -4,6 +4,11 @@ export const loadFormData = (categoryName) => {
     return JSON.parse(localStorage.getItem(categoryName)) || [defaultFormData[categoryName]];
 }
 
+export const resetForm = (categoryName) => {
+    localStorage.removeItem(categoryName);
+    return [defaultFormData[categoryName]];
+}
+
 export const defaultFormData = {
     personalDetails: {
         id: getUID(),
