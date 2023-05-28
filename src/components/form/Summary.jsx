@@ -1,4 +1,4 @@
-import { summaryFormTemplate } from "../../helpers/form/SummaryForm";
+import { summaryFormTemplate } from "../../helpers/form/summaryFormTemplate";
 import Form from "../Form";
 
 const Summary = () => {
