@@ -1,5 +1,4 @@
-import React from 'react';
-import { PDFViewer, Document, Page, StyleSheet, View, Text, Font } from '@react-pdf/renderer';
+import { PDFViewer, Document, Page, StyleSheet, View, Font } from '@react-pdf/renderer';
 import resumeStyles from '../styles/components/resume.style';
 import InterRegular from '../assets/fonts/inter/Inter-Regular.ttf';
 import InterBold from '../assets/fonts/inter/Inter-Bold.ttf';
@@ -17,24 +16,24 @@ import WorkLinksSection from '../components/resume/pdf/sections/WorkLinksSection
 import SoftSkillsSection from '../components/resume/pdf/sections/SoftSkillsSection';
 import { getSelectedCategories } from '../helpers/categoriesHelper';
 
-Font.register({
-  family: 'Inter',
-  fonts: [
-    {
-      src: InterRegular
-    },
-    {
-      src: InterBold,
-      fontWeight: 700
-    },
-    {
-      src: InterBlack,
-      fontWeight: 900
-    }
-  ]
-});
 
 const ResumePDF = () => {
+  Font.register({
+    family: 'Inter',
+    fonts: [
+      {
+        src: InterRegular
+      },
+      {
+        src: InterBold,
+        fontWeight: 700
+      },
+      {
+        src: InterBlack,
+        fontWeight: 900
+      }
+    ]
+  });
 
   const formData = useSelector(state => state.formData);
 
