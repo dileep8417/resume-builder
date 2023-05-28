@@ -5,6 +5,7 @@ import { categoriesPageHeading } from '../utils/constants';
 import { isCategoriesSelected } from '../helpers/categoriesHelper';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import routes from '../utils/routes';
 
 const Categories = () => {
     const categories = useSelector(state => state.categories);
@@ -35,7 +36,7 @@ const Categories = () => {
                     })}
                 </div>
 
-                {isCategoriesSelected(categories) ? <Link to='/details/personal_details'><button className={`primary_btn ${styles.nextStepBtn}`}>Next Step</button></Link> : '' }
+                {isCategoriesSelected(categories) ? <Link to={routes.personalDetails}><button className={`primary_btn ${styles.nextStepBtn}`}>Next Step</button></Link> : '' }
             </div>
         </div>
     );

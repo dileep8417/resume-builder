@@ -1,13 +1,19 @@
+const basePath = import.meta.env.BASE_URL || '/';
+
 const routes = {
-    personalDetails: '/details/personal_details',
-    summary: '/details/summary',
-    education: '/details/education',
-    technicalSkills: '/details/technical_skills',
-    workExperience: '/details/work_experience',
-    projects: '/details/projects',
-    softSkills: '/details/soft_skills',
-    workLinks: '/details/work_links',
-    accomplishments: '/details/accomplishments'
+    home: basePath,
+    categories: basePath + 'categories',
+    preview: basePath + 'preview',
+    resume: basePath + 'resume',
+    personalDetails: basePath + 'details/personal_details',
+    summary: basePath + 'details/summary',
+    education: basePath + 'details/education',
+    technicalSkills: basePath + 'details/technical_skills',
+    workExperience: basePath + 'details/work_experience',
+    projects: basePath + 'details/projects',
+    softSkills: basePath + 'details/soft_skills',
+    workLinks: basePath + 'details/work_links',
+    accomplishments: basePath + 'details/accomplishments'
 }
 
 export default routes;

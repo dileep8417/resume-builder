@@ -1,43 +1,113 @@
-import { Suspense, lazy } from 'react';
+import { lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import Loading from '../components/Loading';
+import LazyLoad from '../components/wrappers/LazyLoad';
 
-const lazyLoadComponent = (path) => {
-    const Component =  lazy(() => import(path));
-    return (
-        <Suspense fallback={<Loading />}>
-            <Component />
-        </Suspense>
-    )
-}
+// Lazy load pages
+const Welcome = lazy(() => import('./Welcome'));
+const Categories = lazy(() => import('./Categories'));
+const Preview = lazy(() => import('./Preview'));
+const ResumePdf = lazy(() => import('./ResumePdf'));
+const Details = lazy(() => import('./Details'));
+const PageNotFound = lazy(() => import('./PageNotFound'));
 
-const formComponentsPath = '../components/form/';
+// Lazy load forms
+const PersonalDetails = lazy(() => import('../components/form/PersonalDetails'));
+const Summary = lazy(() => import('../components/form/Summary'));
+const WorkExperience = lazy(() => import('../components/form/WorkExperience'));
+const TechnicalSkills = lazy(() => import('../components/form/TechnicalSkills'));
+const SoftSkills = lazy(() => import('../components/form/SoftSkills'));
+const WorkLinks = lazy(() => import('../components/form/WorkLinks'));
+const Accomplishments = lazy(() => import('../components/form/Accomplishments'));
+const Projects = lazy(() => import('../components/form/Projects'));
+const Education = lazy(() => import('../components/form/Education'));
+
 
 const Content = () => {
+    const basePath = import.meta.env.BASE_URL || '/';
     return (
         <div className="page_content">
             <Routes>
-                <Route path='/' element={lazyLoadComponent('./Welcome')} />
+                <Route path={`${basePath}`} element={
+                    <LazyLoad>
+                        <Welcome />
+                    </LazyLoad>
+                }/>
 
-                <Route path='/categories' element={lazyLoadComponent('./Categories')} />
+                <Route path={`${basePath}categories`} element={
+                    <LazyLoad>
+                        <Categories />
+                    </LazyLoad>
+                }/>
 
-                <Route path='/resume' element={lazyLoadComponent('./ResumePdf')} />
+                <Route path={`${basePath}resume`} element={
+                    <LazyLoad>
+                        <ResumePdf />
+                    </LazyLoad>
+                }/>
 
-                <Route path='/preview' element={lazyLoadComponent('./Preview')} />
+                <Route path={`${basePath}preview`} element={
+                    <LazyLoad>
+                        <Preview />
+                    </LazyLoad>
+                }/>
     
-                <Route path='/details' element={lazyLoadComponent('./Details')}>
-                    <Route index path='personal_details' element={lazyLoadComponent(formComponentsPath + 'PersonalDetails')} />
-                    <Route path='summary' element={lazyLoadComponent(formComponentsPath + 'Summary')} />
-                    <Route path='work_experience' element={lazyLoadComponent(formComponentsPath + 'WorkExperience')} />
-                    <Route path='technical_skills' element={lazyLoadComponent(formComponentsPath + 'TechnicalSkills')} />
-                    <Route path='soft_skills' element={lazyLoadComponent(formComponentsPath + 'SoftSkills')} />
-                    <Route path='work_links' element={lazyLoadComponent(formComponentsPath + 'WorkLinks')} />
-                    <Route path='accomplishments' element={lazyLoadComponent(formComponentsPath + 'Accomplishments')} />
-                    <Route path='projects' element={lazyLoadComponent(formComponentsPath + 'Projects')} />
-                    <Route path='education' element={lazyLoadComponent(formComponentsPath + 'Education')} />
+                <Route path={`${basePath}details`} element={
+                    <LazyLoad>
+                        <Details />
+                    </LazyLoad>
+                    }>
+                    <Route index path='personal_details' element={
+                        <LazyLoad>
+                            <PersonalDetails />
+                        </LazyLoad>
+                    }/>
+                    <Route path='summary' element={
+                        <LazyLoad>
+                            <Summary />
+                        </LazyLoad>
+                    }/>
+                    <Route path='work_experience' element={
+                        <LazyLoad>
+                            <WorkExperience />
+                        </LazyLoad>
+                    }/>
+                    <Route path='technical_skills' element={
+                        <LazyLoad>
+                            <TechnicalSkills />
+                        </LazyLoad>
+                    }/>
+                    <Route path='soft_skills' element={
+                        <LazyLoad>
+                            <SoftSkills />
+                        </LazyLoad>
+                    }/>
+                    <Route path='work_links' element={
+                        <LazyLoad>
+                            <WorkLinks />
+                        </LazyLoad>
+                    }/>
+                    <Route path='accomplishments' element={
+                        <LazyLoad>
+                            <Accomplishments />
+                        </LazyLoad>
+                    }/>
+                    <Route path='projects' element={
+                        <LazyLoad>
+                            <Projects />
+                        </LazyLoad>
+                    }/>
+                    <Route path='education' element={
+                        <LazyLoad>
+                            <Education />
+                        </LazyLoad>
+                    }/>
                 </Route>
                 
-                <Route path="*" element={lazyLoadComponent('./PageNotFound')} />
+                <Route path="*" element={
+                    <LazyLoad>
+                        <PageNotFound />
+                    </LazyLoad>
+                }/>
             </Routes>
         </div>
     );

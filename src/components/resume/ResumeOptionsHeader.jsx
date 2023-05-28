@@ -7,6 +7,7 @@ import styles from '../../styles/components/Resume.module.css';
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { resetFormData } from '../../features/formData/formSlice';
+import routes from '../../utils/routes';
 
 const ResumeOptionsHeader = ({ isPreviewMode }) => {
     const navigate = useNavigate();
@@ -21,14 +22,14 @@ const ResumeOptionsHeader = ({ isPreviewMode }) => {
         <div className={styles.optionsContainer}>
             
             <abbr title="Generate PDF">
-                <BsFileEarmarkPdf className={styles.icon} onClick={() => navigate('/resume')} />
+                <BsFileEarmarkPdf className={styles.icon} onClick={() => navigate(routes.resume)} />
             </abbr>
             <abbr title="Reset Resume Data">
                 <AiOutlineClear className={styles.icon} onClick={resetResumeHandler} />
             </abbr>
             {isPreviewMode && (
             <abbr title="Maximize">
-                <MdZoomOutMap className={styles.icon} onClick={() => navigate('/preview')}/>
+                <MdZoomOutMap className={styles.icon} onClick={() => navigate(routes.preview)}/>
             </abbr>
             )}
             {!isPreviewMode && (

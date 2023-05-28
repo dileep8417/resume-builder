@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import styles from '../styles/pages/Welcome.module.css';
 import { IntoPageHeading, IntroPageSubHeading, instructionSteps, welcomeMsg, instructionsMsg } from '../utils/constants';
+import routes from '../utils/routes';
 
 const Welcome = () => {
     return (
@@ -12,7 +13,7 @@ const Welcome = () => {
                 <div className={styles.page_sub_heading}>
                     {IntroPageSubHeading}
                 </div>
-                <Link to='/categories'>
+                <Link to={routes.categories}>
                     <button className="primary_btn">Build Now</button>
                 </Link>
             </div>

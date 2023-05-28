@@ -91,7 +91,11 @@ const Form = ({ categoryType, formTemplate }) => {
             {categoryType === 'technicalSkills' && <TechnicalSkillsActions styles={styles} />}
 
             <div className={styles.btnContainer}>
-                {nxtStepLink ? <Link to={nxtStepLink} className={`primary_btn ${styles.btn}`}>Next Step</Link> : <Link to='/preview' className={`primary_btn ${styles.btn}`}>Preview details</Link>}
+                {nxtStepLink ? (
+                    <Link to={nxtStepLink} className={`primary_btn ${styles.btn}`}>Next Step</Link>
+                ) : (
+                    <Link to={routes['preview']} className={`primary_btn ${styles.btn}`}>Preview details</Link>
+                )}
             </div>
             
         </div>
