@@ -1,8 +1,8 @@
 import { PDFViewer, Document, Page, StyleSheet, View, Font } from '@react-pdf/renderer';
 import resumeStyles from '../../../styles/components/resume.style';
-import InterRegular from '../assets/fonts/inter/Inter-Regular.ttf';
-import InterBold from '../assets/fonts/inter/Inter-Bold.ttf';
-import InterBlack from '../assets/fonts/inter/Inter-Black.ttf';
+import InterRegular from '../../../assets/fonts/inter/Inter-Regular.ttf';
+import InterBold from '../../../assets/fonts/inter/Inter-Bold.ttf';
+import InterBlack from '../../../assets/fonts/inter/Inter-Black.ttf';
 import { useSelector } from 'react-redux';
 import WorkExperienceSection from './sections/WorkExperienceSection'
 import SummarySection from './sections/SummarySection';

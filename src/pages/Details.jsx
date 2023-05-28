@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import CategoriesSideNav from "../components/CategoriesSideNav";
 import styles from "../styles/pages/Details.module.css";
-import Resume from "../components/resume/resume";
+import Resume from "../components/resume/ResumePreview";
 
 const Details = () => {
     return (

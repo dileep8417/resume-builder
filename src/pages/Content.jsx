@@ -5,7 +5,6 @@ import LazyLoad from '../components/wrappers/LazyLoad';
 // Lazy load pages
 const Welcome = lazy(() => import('./Welcome'));
 const Categories = lazy(() => import('./Categories'));
-const Preview = lazy(() => import('./Preview'));
 const Details = lazy(() => import('./Details'));
 const PageNotFound = lazy(() => import('./PageNotFound'));
 
@@ -19,6 +18,9 @@ const WorkLinks = lazy(() => import('../components/form/WorkLinks'));
 const Accomplishments = lazy(() => import('../components/form/Accomplishments'));
 const Projects = lazy(() => import('../components/form/Projects'));
 const Education = lazy(() => import('../components/form/Education'));
+
+// Lazy load live preview
+const ResumePreview = lazy(() => import('../components/resume/ResumePreview'));
 
 // Lazy load PDF
 const ResumePdf = lazy(() => import('../components/resume/pdf/ResumePDF'));
@@ -48,7 +50,7 @@ const Content = () => {
 
                 <Route path={`${basePath}preview`} element={
                     <LazyLoad>
-                        <Preview />
+                        <ResumePreview />
                     </LazyLoad>
                 }/>
     
