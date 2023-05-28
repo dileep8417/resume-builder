@@ -1,20 +1,20 @@
 import { PDFViewer, Document, Page, StyleSheet, View, Font } from '@react-pdf/renderer';
-import resumeStyles from '../styles/components/resume.style';
+import resumeStyles from '../../../styles/components/resume.style';
 import InterRegular from '../assets/fonts/inter/Inter-Regular.ttf';
 import InterBold from '../assets/fonts/inter/Inter-Bold.ttf';
 import InterBlack from '../assets/fonts/inter/Inter-Black.ttf';
 import { useSelector } from 'react-redux';
-import WorkExperienceSection from '../components/resume/pdf/sections/WorkExperienceSection'
-import SummarySection from '../components/resume/pdf/sections/SummarySection';
-import ProjectsSection from '../components/resume/pdf/sections/ProjectsSection';
-import AccomplishmentsSection from '../components/resume/pdf/sections/AccomplishmentsSection';
-import EducationSection from '../components/resume/pdf/sections/EducationSection';
-import TechnicalSkillsSection from '../components/resume/pdf/sections/TechnicalSkillsSection';
-import ContactDetailsSection from '../components/resume/pdf/sections/ContactDetailsSection';
-import ResumeHeader from '../components/resume/pdf/sections/ResumeHeader';
-import WorkLinksSection from '../components/resume/pdf/sections/WorkLinksSection';
-import SoftSkillsSection from '../components/resume/pdf/sections/SoftSkillsSection';
-import { getSelectedCategories } from '../helpers/categoriesHelper';
+import WorkExperienceSection from './sections/WorkExperienceSection'
+import SummarySection from './sections/SummarySection';
+import ProjectsSection from './sections/ProjectsSection';
+import AccomplishmentsSection from './sections/AccomplishmentsSection';
+import EducationSection from './sections/EducationSection';
+import TechnicalSkillsSection from './sections/TechnicalSkillsSection';
+import ContactDetailsSection from './sections/ContactDetailsSection';
+import ResumeHeader from './sections/ResumeHeader';
+import WorkLinksSection from './sections/WorkLinksSection';
+import SoftSkillsSection from './sections/SoftSkillsSection';
+import { getSelectedCategories } from '../../../helpers/categoriesHelper';
 
 
 const ResumePDF = () => {

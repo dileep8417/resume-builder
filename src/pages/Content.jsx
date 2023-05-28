@@ -6,7 +6,6 @@ import LazyLoad from '../components/wrappers/LazyLoad';
 const Welcome = lazy(() => import('./Welcome'));
 const Categories = lazy(() => import('./Categories'));
 const Preview = lazy(() => import('./Preview'));
-const ResumePdf = lazy(() => import('./ResumePdf'));
 const Details = lazy(() => import('./Details'));
 const PageNotFound = lazy(() => import('./PageNotFound'));
 
@@ -21,6 +20,8 @@ const Accomplishments = lazy(() => import('../components/form/Accomplishments'))
 const Projects = lazy(() => import('../components/form/Projects'));
 const Education = lazy(() => import('../components/form/Education'));
 
+// Lazy load PDF
+const ResumePdf = lazy(() => import('../components/resume/pdf/ResumePDF'));
 
 const Content = () => {
     const basePath = import.meta.env.BASE_URL || '/';
