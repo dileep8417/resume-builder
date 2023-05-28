@@ -16,9 +16,9 @@ const ProjectsSection = ({ styles }) => {
                     <div key={project.id} style={styles.project}>
                         <div style={styles.flexContainer}>
                             <div style={{...styles.subHeading, ...{marginBottom: '0'}}}>{title !== '' && title}</div>
-                            <div>
-                                {sourceCode.length > 7 && <a style={{margin: '0 12px 0 0', textDecoration: 'none'}} target="_blank" rel="norefferer" href={sourceCode}>Source code</a>}
-                                {demo.length > 7 && <a style={{textDecoration: 'none'}} target="_blank" rel="norefferer" href={demo}>Demo</a>}
+                            <div style={styles.projectLinks}>
+                                {sourceCode.length > 7 && <a style={styles.projectLink} target="_blank" rel="norefferer" href={sourceCode}>Source code</a>}
+                                {demo.length > 7 && <a style={styles.projectLink} target="_blank" rel="norefferer" href={demo}>Demo</a>}
                             </div>
                         </div>
                         <div style={styles.projectDescription}>{description !== '' && description}</div>

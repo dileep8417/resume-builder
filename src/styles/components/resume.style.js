@@ -124,6 +124,18 @@ const styles = {
     projectDescription: {
         margin: '6px 0 0',
     },
+
+    projectLinks: {
+        display: 'flex',
+        flexDirection: 'row',
+        gap: '24px'
+    },
+
+    projectLink: {
+        textDecoration: 'none',
+        color: '#008BDC',
+
+    },
     
     skillCategories: {
         display: 'flex',
