@@ -1,45 +1,43 @@
-import Welcome from './Welcome';
-import Categories from './Categories';
-import Details from './Details';
-import Preview from './Preview';
-import PageNotFound from './PageNotFound';
-import { Routes, Route} from 'react-router-dom';
-import PersonalDetails from '../components/form/PersonalDetails';
-import Summary from '../components/form/Summary';
-import WorkExperience from '../components/form/WorkExperience';
-import Education from '../components/form/Education';
-import Projects from '../components/form/Projects';
-import TechnicalSkills from '../components/form/TechnicalSkills';
-import SoftSkills from '../components/form/SoftSkills';
-import WorkLinks from '../components/form/WorkLinks';
-import Accomplishments from '../components/form/Accomplishments';
-import ResumePDF from './ResumePDF';
+import { Suspense, lazy } from 'react';
+import { Route, Routes } from 'react-router-dom';
+import Loading from '../components/Loading';
+
+const lazyLoadComponent = (path) => {
+    const Component =  lazy(() => import(path));
+    return (
+        <Suspense fallback={<Loading />}>
+            <Component />
+        </Suspense>
+    )
+}
+
+const formComponentsPath = '../components/form/';
 
 const Content = () => {
     return (
         <div className="page_content">
             <Routes>
-                <Route path='/' element={<Welcome />} />
+                <Route path='/' element={lazyLoadComponent('./Welcome')} />
 
-                <Route path='/categories' element={<Categories />} />
+                <Route path='/categories' element={lazyLoadComponent('./Categories')} />
 
-                <Route path='/details' element={<Details />}>
-                    <Route index path='personal_details' element={<PersonalDetails />} />
-                    <Route path='summary' element={<Summary />} />
-                    <Route path='work_experience' element={<WorkExperience />} />
-                    <Route path='technical_skills' element={<TechnicalSkills />} />
-                    <Route path='soft_skills' element={<SoftSkills />} />
-                    <Route path='work_links' element={<WorkLinks />} />
-                    <Route path='accomplishments' element={<Accomplishments />} />
-                    <Route path='projects' element={<Projects />} />
-                    <Route path='education' element={<Education />} />
+                <Route path='/resume' element={lazyLoadComponent('./ResumePdf')} />
+
+                <Route path='/preview' element={lazyLoadComponent('./Preview')} />
+    
+                <Route path='/details' element={lazyLoadComponent('./Details')}>
+                    <Route index path='personal_details' element={lazyLoadComponent(formComponentsPath + 'PersonalDetails')} />
+                    <Route path='summary' element={lazyLoadComponent(formComponentsPath + 'Summary')} />
+                    <Route path='work_experience' element={lazyLoadComponent(formComponentsPath + 'WorkExperience')} />
+                    <Route path='technical_skills' element={lazyLoadComponent(formComponentsPath + 'TechnicalSkills')} />
+                    <Route path='soft_skills' element={lazyLoadComponent(formComponentsPath + 'SoftSkills')} />
+                    <Route path='work_links' element={lazyLoadComponent(formComponentsPath + 'WorkLinks')} />
+                    <Route path='accomplishments' element={lazyLoadComponent(formComponentsPath + 'Accomplishments')} />
+                    <Route path='projects' element={lazyLoadComponent(formComponentsPath + 'Projects')} />
+                    <Route path='education' element={lazyLoadComponent(formComponentsPath + 'Education')} />
                 </Route>
-
-                <Route path='/resume' element={<ResumePDF />} />
-
-                <Route path='/preview' element={<Preview />} />
                 
-                <Route path="*" element={<PageNotFound />} />
+                <Route path="*" element={lazyLoadComponent('./PageNotFound')} />
             </Routes>
         </div>
     );

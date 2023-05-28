@@ -14,7 +14,7 @@ const Navbar = () => {
 
     return (
         <nav className={styles.navbar}>
-            <a href='/' className={styles.logo}>Resume Builder</a>
+            <Link to='/' className={styles.logo}>Resume Builder</Link>
             <div className="nav_menu">
                 {showDetailsLink && (
                     <div>
