@@ -7,10 +7,15 @@ import WorkExperienceSection from './sections/WorkExperienceSection';
 import WorkLinksSection from './sections/WorkLinksSection';
 import ContactDetailsSection from './sections/ContactDetailsSection';
 import SummarySection from './sections/SummarySection';
-import styles from '../../styles/components/resume.style';
+import { getResumeStyles } from '../../styles/components/resume.style';
 import SoftSkillsSection from './sections/SoftSkillsSection';
+import { useSelector } from 'react-redux';
 
 const ResumeTemplate = () => {
+    const options = {
+        fontSize: useSelector(state => state.resume.fontSize)
+    };
+    const styles = getResumeStyles(options);
     return (
         <div style={styles.resume}>
             <ResumeHeader styles={styles} />

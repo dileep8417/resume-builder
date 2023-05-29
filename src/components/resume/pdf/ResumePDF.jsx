@@ -1,5 +1,4 @@
 import { PDFViewer, Document, Page, StyleSheet, View, Font } from '@react-pdf/renderer';
-import resumeStyles from '../../../styles/components/resume.style';
 import InterRegular from '../../../assets/fonts/inter/Inter-Regular.ttf';
 import InterBold from '../../../assets/fonts/inter/Inter-Bold.ttf';
 import InterBlack from '../../../assets/fonts/inter/Inter-Black.ttf';
@@ -15,6 +14,7 @@ import ResumeHeader from './sections/ResumeHeader';
 import WorkLinksSection from './sections/WorkLinksSection';
 import SoftSkillsSection from './sections/SoftSkillsSection';
 import { getSelectedCategories } from '../../../helpers/categoriesHelper';
+import { getResumeStyles } from '../../../styles/components/resume.style';
 
 
 const ResumePDF = () => {
@@ -35,6 +35,12 @@ const ResumePDF = () => {
     ]
   });
 
+  const options = {
+    fontSize: useSelector(state => state.resume.fontSize)
+  };
+
+  console.log(options);
+
   const formData = useSelector(state => state.formData);
 
   const selectedCategories = getSelectedCategories();
@@ -44,7 +50,7 @@ const ResumePDF = () => {
       width: '100vw',
       height: '100vh'
     },
-    ...resumeStyles
+    ...getResumeStyles(options)
   });
   
   return (
