@@ -37,7 +37,7 @@
     border: 1px solid #2B98D6;
     border-radius: 16px;
     padding: 32px;
-    max-width: 520px;
+    max-width: 580px;
     margin: auto;
 }
 
@@ -53,14 +53,14 @@
 
 .step_heading {
     color: black;
-    width: 58px;
+    width: 70px;
     font-weight: 500;
 }
 
-.instruction {
-}
-
 @media (max-width: 767px) {
+    .welcome_page {
+        font-size: 14px;
+    }
     .header {
         padding: 48px 24px 24px;
     }
@@ -86,8 +86,5 @@
     .instructions_container {
         border-radius: 12px;
         padding: 16px 24px;
-    }
-    
-    .step {
     }
 }
