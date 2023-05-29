@@ -1,5 +1,6 @@
 export function getResumeStyles(options) {
     const fontSize = parseInt(options.fontSize);
+
     return {
         resume: {
             position: 'relative',
