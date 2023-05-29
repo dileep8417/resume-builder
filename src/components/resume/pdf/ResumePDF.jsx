@@ -87,11 +87,11 @@ const ResumePDF = () => {
                 <SoftSkillsSection styles={styles} skills={formData.softSkills[0].fields.skills} />
               )}
 
-              <ContactDetailsSection styles={styles} details={formData.personalDetails[0]} />
-
               {selectedCategories['workLinks'] && (
                 <WorkLinksSection styles={styles} details={formData.workLinks[0]} />
               )}
+
+              <ContactDetailsSection styles={styles} details={formData.personalDetails[0]} />
             </View>
           </View>
 

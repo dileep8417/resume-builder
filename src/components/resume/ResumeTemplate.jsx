@@ -26,8 +26,8 @@ const ResumeTemplate = () => {
                 <div style={styles.rightContainer}>
                     <TechnicalSkillsSection styles={styles} />
                     <SoftSkillsSection styles={styles} />
-                    <ContactDetailsSection styles={styles} />
                     <WorkLinksSection styles={styles} />
+                    <ContactDetailsSection styles={styles} />
                 </div>
             </div>
         </div>
