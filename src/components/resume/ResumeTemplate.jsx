@@ -11,9 +11,11 @@ import { getResumeStyles } from '../../styles/components/resume.style';
 import SoftSkillsSection from './sections/SoftSkillsSection';
 import { useSelector } from 'react-redux';
 
-const ResumeTemplate = () => {
+const ResumeTemplate = ({ isPreview }) => {
     const options = {
-        fontSize: useSelector(state => state.resume.fontSize)
+        fontSize: useSelector(state => state.resume.fontSize),
+        isPDF: false,
+        isPreview: isPreview,
     };
     const styles = getResumeStyles(options);
     return (

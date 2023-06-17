@@ -1,24 +1,28 @@
 export function getResumeStyles(options) {
     const fontSize = parseInt(options.fontSize);
+    const isPreview = options.isPreview;
 
     return {
         resume: {
             position: 'relative',
-            width: '611px',
-            minHeight: '842px',
+            width: '8.27in',
+            minHeight: '11.69in',
             background: '#FFFFFF',
             margin: 'auto',
             padding: '24px',
             fontFamily: 'Inter',
             fontWeight: '400',
-            fontSize: fontSize + 'px',
+            fontSize: fontSize + 'pt',
             lineHeight: 1.2727,
             color: '#000000',
+            scale: isPreview ? '0.75' : '1',
+            left: isPreview ? '-72px' : '0',
+            top: isPreview ? '-102px' : '0',
         },
         
         heading: {
             fontWeight: '900',
-            fontSize: fontSize + 1 +'px',
+            fontSize: fontSize + 'pt',
             lineHeight: 1,
             color: '#2E4064',
             margin: '0 0 10px',
@@ -26,21 +30,21 @@ export function getResumeStyles(options) {
         
         subHeading: {
             fontWeight: '700',
-            fontSize: fontSize + 'px',
+            fontSize: fontSize + 'pt',
             lineHeight: 1.2727,
             margin: '0 0 6px',
         },
     
         txtContent: {
             fontWeight: '400',
-            fontSize: fontSize + 'px',
+            fontSize: fontSize + 'pt',
             lineHeight: 1.2727,
             color: '#000000',
         },
         
         personName: {
             fontWeight: '900',
-            fontSize: '24px',
+            fontSize: '21pt',
             lineHeight: 1.1,
             color: '#2E4064',
         },
@@ -57,11 +61,7 @@ export function getResumeStyles(options) {
         },
         
         rightContainer: {
-            width: '180px',
-        },
-        
-        rightContainerPdf: {
-            width: '158px',
+            width: '165pt',
         },
     
         section: {
@@ -171,8 +171,8 @@ export function getResumeStyles(options) {
         },
     
         listIcon: {
-            width: fontSize + 'px',
-            height: fontSize + 'px',
+            width: fontSize + 'pt',
+            height: fontSize + 'pt',
             position: 'relative',
         },
     }

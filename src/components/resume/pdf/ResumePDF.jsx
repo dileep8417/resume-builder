@@ -36,10 +36,9 @@ const ResumePDF = () => {
   });
 
   const options = {
-    fontSize: useSelector(state => state.resume.fontSize)
+    fontSize: useSelector(state => state.resume.fontSize),
+    isPDF: true,
   };
-
-  console.log(options);
 
   const formData = useSelector(state => state.formData);
 
@@ -84,7 +83,7 @@ const ResumePDF = () => {
                 <AccomplishmentsSection styles={styles} accomplishments={formData.accomplishments[0].fields.accomplishment} />
               )}
             </View>
-            <View style={styles.rightContainerPdf}>
+            <View style={styles.rightContainer}>
               {selectedCategories['technicalSkills'] && (
                 <TechnicalSkillsSection styles={styles} technicalSkills={formData.technicalSkills} />
               )}
