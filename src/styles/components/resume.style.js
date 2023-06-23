@@ -122,7 +122,8 @@ export function getResumeStyles(options) {
         },
         
         project: {
-            margin: '0 0 14px',
+            display: 'flex',
+            gap: '14px',
         },
     
         projectDescription: {
