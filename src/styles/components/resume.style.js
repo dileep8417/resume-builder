@@ -9,7 +9,7 @@ export function getResumeStyles(options) {
             minHeight: '11.69in',
             background: '#FFFFFF',
             margin: 'auto',
-            padding: '24px',
+            padding: '18pt',
             fontFamily: 'Inter',
             fontWeight: '400',
             fontSize: fontSize + 'pt',
@@ -25,14 +25,14 @@ export function getResumeStyles(options) {
             fontSize: fontSize + 'pt',
             lineHeight: 1,
             color: '#2E4064',
-            margin: '0 0 10px',
+            margin: '0 0 9pt',
         },
         
         subHeading: {
             fontWeight: '700',
             fontSize: fontSize + 'pt',
             lineHeight: 1.2727,
-            margin: '0 0 6px',
+            margin: '0 0 5pt',
         },
     
         txtContent: {
@@ -53,15 +53,15 @@ export function getResumeStyles(options) {
             display: 'flex',
             flexDirection: 'row',
             flexWrap: 'nowrap',
-            gap: '32px',
+            gap: '32pt',
         },
         
         leftContainer: {
-            flex: '1',
+            width: '6in',
         },
         
         rightContainer: {
-            width: '165pt',
+            width: '2.27in',
         },
     
         section: {
@@ -100,11 +100,12 @@ export function getResumeStyles(options) {
         },
         
         workDone: {
-            padding: '0 0 0 24px',
+            padding: '0 0 0 16pt',
+
         },
     
         workDonePdf: {
-            padding: '0 0 0 8px'
+            padding: '0 0 0 4pt',
         },
         
         collegeInfo: {
