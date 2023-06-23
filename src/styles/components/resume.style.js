@@ -53,15 +53,15 @@ export function getResumeStyles(options) {
             display: 'flex',
             flexDirection: 'row',
             flexWrap: 'nowrap',
-            gap: '32pt',
+            gap: '30pt',
         },
         
         leftContainer: {
-            width: '5.97in',
+            width: '5.9in',
         },
         
         rightContainer: {
-            width: '2.3in',
+            width: '2.27in',
         },
     
         section: {
@@ -151,7 +151,9 @@ export function getResumeStyles(options) {
             display: 'flex',
             flexDirection: 'column',
         },
-    
+        skills: {
+            lineHeight: '2px',
+        },
         link: {
             textDecoration: 'none',
             color: '#000000',
@@ -168,7 +170,8 @@ export function getResumeStyles(options) {
             display: 'flex',
             flexDirection: 'row',
             gap: '6px',
-            alignItems: 'center'
+            alignItems: 'center',
+            margin: '3px 0 0'
         },
     
         listIcon: {
