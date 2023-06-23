@@ -6,7 +6,7 @@ const BulletPoint = ({ children }) => {
         bulletPoint: {
             flexDirection: 'row',
             marginBottom: 5,
-            maxWidth: '300px'
+            maxWidth: '5.5in'
         },
         bullet: {
             marginRight: 5,
