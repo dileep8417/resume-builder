@@ -121,8 +121,9 @@ export function getResumeStyles(options) {
             listStyleType: 'circle',
         },
         
-        project: {
+        projects: {
             display: 'flex',
+            flexDirection: 'column',
             gap: '14px',
         },
     
