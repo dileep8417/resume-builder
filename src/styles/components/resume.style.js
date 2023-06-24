@@ -57,11 +57,11 @@ export function getResumeStyles(options) {
         },
         
         leftContainer: {
-            width: '5.9in',
+            flex: '1',
         },
         
         rightContainer: {
-            width: '2.27in',
+            maxWidth: '2.29in',
         },
     
         section: {
