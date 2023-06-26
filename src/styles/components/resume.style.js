@@ -22,7 +22,7 @@ export function getResumeStyles(options) {
         
         heading: {
             fontWeight: '900',
-            fontSize: fontSize + 'pt',
+            fontSize: fontSize + 1 + 'pt',
             lineHeight: 1,
             color: '#2E4064',
             margin: '0 0 9pt',
@@ -47,6 +47,8 @@ export function getResumeStyles(options) {
             fontSize: '21pt',
             lineHeight: 1.1,
             color: '#2E4064',
+            textAlign: 'center',
+            margin: '0 0 8pt'
         },
         
         body: {
@@ -65,17 +67,17 @@ export function getResumeStyles(options) {
         },
     
         section: {
-            margin: '24px 0 0',
+            margin: '16pt 0 0',
         },
         
         companies: {
             display: 'flex',
             flexDirection: 'column',
-            gap: '14px'
+            gap: '12pt'
         },
         
         companyName: {
-            margin: '0 0 6px',
+            margin: '0 0 6pt',
         },
         
         locationSeparator: {
@@ -152,10 +154,25 @@ export function getResumeStyles(options) {
         skillCategory: {
             display: 'flex',
             flexDirection: 'column',
+            gap: '4pt',
         },
+
+        skillsContainer: {
+            display: 'flex',
+            flexDirection: "row",
+            flexWrap: 'wrap',
+            rowGap: '8pt',
+            columnGap: '0.045in'
+        },
+
+        skill: {
+            width: '1.1in',
+        },
+
         skills: {
             lineHeight: '2px',
         },
+
         link: {
             textDecoration: 'none',
             color: '#000000',
