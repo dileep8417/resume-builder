@@ -1,4 +1,5 @@
 import { Text, View } from "@react-pdf/renderer";
+import BulletPoint from "../../../wrappers/BulletPoint";
 
 const TechnicalSkillsSection = ({ styles, technicalSkills }) => {
     return (
@@ -7,12 +8,20 @@ const TechnicalSkillsSection = ({ styles, technicalSkills }) => {
             <View style={styles.skillCategories}>
                 {technicalSkills.map(skillCategory => {
                     const categoryName = skillCategory.fields.categoryName.trim();
-                    const skills = skillCategory.fields.skills.trim();
+                    const skills = skillCategory.fields.skills.trim().split(',');
 
                     return (
                         <View key={skillCategory.id} style={styles.skillCategory}>
                             {categoryName !== '' && <Text style={styles.subHeading}>{categoryName}:</Text>}
-                            {skills !== '' && <Text breakWords={false} style={styles.skills}>{skills}</Text>}
+                            <View style={styles.skillsContainer}>
+                                {skills.map((skill, index) => {
+                                    return (
+                                        <View key={index} style={styles.skill}>
+                                            <BulletPoint>{skill.trim()}</BulletPoint>
+                                        </View>
+                                    );
+                                })}
+                            </View>
                         </View>
                     )
                 })}
