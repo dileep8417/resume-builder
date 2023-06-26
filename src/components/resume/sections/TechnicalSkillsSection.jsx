@@ -9,12 +9,20 @@ const TechnicalSkillsSection = ({ styles }) => {
             <div style={styles.skillCategories}>
                 {technicalSkills.map(skillCategory => {
                     const categoryName = skillCategory.fields.categoryName.trim();
-                    const skills = skillCategory.fields.skills.trim();
+                    const skills = skillCategory.fields.skills.trim().split(',');
 
                     return (
                         <div key={skillCategory.id} style={styles.skillCategory}>
                             {categoryName !== '' && <div style={styles.subHeading}>{categoryName}:</div>}
-                            {skills !== '' && <div>{skills}</div>}
+                            <div style={styles.skillsContainer}>
+                                {skills.map((skill, index) => {
+                                    return (
+                                        <div style={styles.skill} key={index}>
+                                            <div>{'\u2022'} {skill.trim()}</div>
+                                        </div>
+                                    );
+                                })}
+                            </div>
                         </div>
                     )
                 })}
