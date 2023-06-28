@@ -161,7 +161,7 @@ export function getResumeStyles(options) {
             display: 'flex',
             flexDirection: "row",
             flexWrap: 'wrap',
-            rowGap: '8pt',
+            rowGap: '4pt',
             columnGap: '0.045in'
         },
 
