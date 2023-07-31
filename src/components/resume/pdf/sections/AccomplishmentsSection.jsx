@@ -12,11 +12,11 @@ const AccomplishmentsSection = ({ styles, accomplishments }) => {
                         return (
                             <View key={index}>
                                 {accomplishment !== '' && (
-                                    <View style={styles.workDonePdf}>
+                                    <Text style={styles.workDonePdf}>
                                         {accomplishments.length === 1 ? accomplishment : (
                                             <BulletPoint key={index}>{accomplishment.trim()}</BulletPoint>
                                         )}
-                                    </View> 
+                                    </Text> 
                                 )}
                             </View>
                         )
